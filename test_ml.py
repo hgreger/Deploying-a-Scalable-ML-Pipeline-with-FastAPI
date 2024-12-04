@@ -5,9 +5,7 @@ import os
 # Fixture to load the dataset 
 @pytest.fixture(scope="module") 
 def data_path(): 
-    project_path = "/home/hgreger/Deploying-a-Scalable-ML-Pipeline-with-FastAPI" 
-    data_path = os.path.join(project_path, "data", "census.csv") 
-    return data_path
+    return os.path.join("data", "census.csv")
     
 @pytest.fixture(scope="module")
 def data(data_path): 
@@ -45,5 +43,5 @@ def test_model_save():
     """
     Check if the model file exists
     """ 
-    model_path = "./model/model.pkl" 
+    model_path = os.path.join("model", "model.pkl") 
     assert os.path.isfile(model_path), "Model file does not exist."
