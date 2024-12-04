@@ -24,7 +24,7 @@ def test_dataset_load(data):
 # TODO: implement the second test. Change the function name and input as needed
 def test_dataset_features(data):
     """
-    Check if test features exist in the dataset
+    Check if training features exist in the dataset
     """
     cat_features = [
         "workclass",
